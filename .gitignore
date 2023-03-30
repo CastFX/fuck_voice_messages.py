@@ -2,4 +2,5 @@
 *.session*
 *.copy
 mysecrets.py
+!mysecrets.py.copy
 *.pyc
