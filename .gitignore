@@ -1,0 +1,5 @@
+*.save
+*.session*
+*.copy
+mysecrets.py
+*.pyc
