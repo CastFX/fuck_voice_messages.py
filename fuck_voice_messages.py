@@ -31,8 +31,8 @@ async def main():
             # Transcribe the voice message using Whisper API
             with open(voice_message, 'rb') as f:
               print("Transcribing voice message")
-              #transcription = openai.Audio.transcribe("whisper-1", f, language="it")
-              transcription = openai.Audio.transcribe("whisper-1", f)
+              lang = language if language and event.message.voice else None
+              transcription = openai.Audio.transcribe("whisper-1", f, language=lang)
 
             if transcription:
                 if os.path.isfile(voice_message):
